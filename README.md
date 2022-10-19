@@ -4,7 +4,7 @@
 
 #### Links to my Github and Trello Board
 
-[Github](https://github.com/Cyeom97/Foods-Around-The-World) [Trello]()
+[Github](https://github.com/Cyeom97/Foods-Around-The-World) [Trello](https://trello.com/b/BCrxqu82/foods-around-the-world)
 
 ---
 
@@ -20,7 +20,23 @@
 
 ---
 
-Food is a necessity for survival. Delicious foods are a necessity for happiness. This application will allow users to see, search, and learn famous dishes from around the world. There are so many delicious dishes and delicacies that people miss out on. Users can input a country and a list will show all the famous dishes in that country. If a user believes a certain dish was left out, they can input them and the list would update.
+Food is a necessity for survival. Delicious foods are a necessity for happiness. There are so many delicious dishes and delicacies that people miss out on. This application will allow users to see, search, and learn famous dishes from around the world. Users can input a country and a list will show all the famous dishes in that country. If a user believes a certain dish was left out, they can input them and the list would update.
+
+---
+
+## Technologies Used
+
+---
+
+- HTML
+- CSS
+- JS
+- REACT
+- MONGODB
+- EXPRESS
+- MONGOOSE
+
+---
 
 ### Credits
 
