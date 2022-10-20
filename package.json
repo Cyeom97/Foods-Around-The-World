@@ -1,0 +1,23 @@
+{
+  "name": "foods-around-the-world",
+  "version": "1.0.0",
+  "description": "### By: Christopher Yeom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyeom97/Foods-Around-The-World.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyeom97/Foods-Around-The-World/issues"
+  },
+  "homepage": "https://github.com/Cyeom97/Foods-Around-The-World#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
