@@ -20,6 +20,12 @@ app.get('/countries', async (req, res) => {
   res.json(allCountries)
 })
 
+// read one country --> GET
+app.get('/countries/:id', async (req, res) => {
+  let foundCountry = await Country.findById(req.params.id)
+  res.json(foundCountry)
+})
+
 // create countries --> POST
 app.post('/countries', async (req, res) => {
   let createdCountry = await Country.create(req.body)
@@ -56,6 +62,12 @@ app.put('/foods/:id', async (req, res) => {
   })
 
   res.json(updatedFood)
+})
+
+// delete one food --> DELETE
+app.delete('/foods/:id', async (req, res) => {
+  let deletedFood = await Food.findByIdAndDelete(req.params.id)
+  res.json(deletedFood)
 })
 
 app.listen(PORT, () => {
