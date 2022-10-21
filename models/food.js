@@ -9,3 +9,5 @@ const foodSchema = new Schema(
   },
   { timestamps: true }
 )
+
+module.exports = foodSchema
