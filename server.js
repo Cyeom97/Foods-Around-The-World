@@ -14,10 +14,16 @@ app.get('/', (req, res) => {
 
 // Country routes
 
-// create country
-app.post('/foods', async (req, res) => {
+// create countries --> POST
+app.post('/countries', async (req, res) => {
   let createdCountry = await Country.create(req.body)
-  res.send(createdCountry)
+  res.json(createdCountry)
+})
+
+// read all countries --> GET
+app.get('/countries', async (req, res) => {
+  let allCountries = await Country.find({})
+  res.json(allCountries)
 })
 
 app.listen(PORT, () => {
