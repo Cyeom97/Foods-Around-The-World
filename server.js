@@ -32,6 +32,19 @@ app.post('/countries', async (req, res) => {
   res.json(createdCountry)
 })
 
+// update one country --> PUT
+app.put('/countries/:id', async (req, res) => {
+  let updatedCountry = await Country.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true
+    }
+  )
+
+  res.json(updatedCountry)
+})
+
 // FOODS
 
 // read all foods --> GET
@@ -42,8 +55,7 @@ app.get('/foods', async (req, res) => {
 
 // create AMERICA food --> POST
 app.post('/foods', async (req, res) => {
-  let americaId = '6352b0b96dabb714d7bc6204'
-  const requestAmerica = { ...req.body, country: americaId }
+  const requestAmerica = { ...req.body }
   let createdFood = await Food.create(requestAmerica)
   res.json(createdFood)
 })
@@ -53,6 +65,12 @@ app.get('/foods/:id', async (req, res) => {
   let foundFood = await Food.findById(req.params.id).populate('country')
 
   res.json(foundFood)
+})
+
+// read all foods by country --> GET
+app.get('/foods/nation/:id', async (req, res) => {
+  const foodsCountry = await Food.find({ country: req.params.id })
+  res.json(foodsCountry)
 })
 
 // update one food --> PUT
