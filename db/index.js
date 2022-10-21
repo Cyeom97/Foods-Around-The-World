@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 mongoose
-  .connect(
-    'mongodb+srv://shuGolf19:DpzOEA2IVeE5UQrc@cluster0.mscbbu1.mongodb.net/foodsDatabase'
-  )
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
