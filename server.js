@@ -37,9 +37,25 @@ app.get('/foods', async (req, res) => {
 // create AMERICA food --> POST
 app.post('/foods', async (req, res) => {
   let americaId = '6352b0b96dabb714d7bc6204'
-  const requestAmerica = { ...req.body, brand: americaId }
+  const requestAmerica = { ...req.body, country: americaId }
   let createdFood = await Food.create(requestAmerica)
   res.json(createdFood)
+})
+
+// read one food --> GET
+app.get('/foods/:id', async (req, res) => {
+  let foundFood = await Food.findById(req.params.id).populate('country')
+
+  res.json(foundFood)
+})
+
+// update one food --> PUT
+app.put('/foods/:id', async (req, res) => {
+  let updatedFood = await Food.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
+
+  res.json(updatedFood)
 })
 
 app.listen(PORT, () => {
