@@ -6,8 +6,10 @@ function App() {
   useEffect(() => {
     const apiCall = async () => {
       let response = await axios.get('http://localhost:3001/foods')
-      console.log(response)
+      return response
     }
+
+    console.log(apiCall())
   }, [])
 
   return (
