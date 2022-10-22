@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 
 const Countries = () => {
     const [countries, updateCountries] = useState([])
-//   const [foods, updateFoods] = useState([])
 
     useEffect(() => {
         const apiCall = async () => {
