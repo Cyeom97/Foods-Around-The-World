@@ -16,9 +16,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>All Foods are here</h1>
+      <header>
+        <h1>All Foods are here</h1>
+      </header>
       {countries.map((country) => (
-        <div>
+        <div key={country._id}>
           <h1>{country.name}</h1>
           <img src={country.url} alt="country pics" />
         </div>
