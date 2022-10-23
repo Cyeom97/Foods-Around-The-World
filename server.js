@@ -70,7 +70,7 @@ app.get('/foods/:id', async (req, res) => {
 })
 
 // read all foods by country --> GET
-app.get('/foods/nation/:id', async (req, res) => {
+app.get('/nation/:id', async (req, res) => {
   const foodsCountry = await Food.find({ country: req.params.id })
   res.json(foodsCountry)
 })

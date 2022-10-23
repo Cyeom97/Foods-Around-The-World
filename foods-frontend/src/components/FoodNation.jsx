@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const FoodNation = () => {
+const Nation = () => {
     const [oneNation, updateOneNation] = useState([])
 
     useEffect(() => {
         const apiCall = async () => {
-            let response = await axios.get('http://localhost:3001/foods/nation/:id')
+            let response = await axios.get('http://localhost:3001/nation/:id')
             
             updateOneNation(response.data)
         }
 
         apiCall()
-    })
+    }, [])
 
 
     return (
@@ -27,4 +27,4 @@ const FoodNation = () => {
     )
 }
 
-export default FoodNation
+export default Nation
