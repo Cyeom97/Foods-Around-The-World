@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+
 
 const Food = () => {
     const [foods, updateFoods] = useState([])
@@ -12,6 +14,8 @@ const Food = () => {
 
         apiCall()
     }, [])
+
+
 
     return (
         <div>

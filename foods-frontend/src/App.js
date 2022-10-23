@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Countries from './components/Countries'
 import Food from './components/Food'
+import FoodNation from './components/FoodNation'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="countries" element={<Countries />} />
           <Route path="foods" element={<Food />} />
+          <Route path="foods/nation/:id" element={<FoodNation />} />
         </Routes>
       </main>
     </div>
