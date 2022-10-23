@@ -4,15 +4,18 @@ import axios from 'axios'
 const Nation = () => {
     const [oneNation, updateOneNation] = useState([])
 
-    useEffect(() => {
+
+    
+    useEffect( () => {
         const apiCall = async () => {
-            let response = await axios.get('http://localhost:3001/nation/:id')
-            
+            let response = await  axios.get('http://localhost:3001/countries/:id')
             updateOneNation(response.data)
         }
 
         apiCall()
     }, [])
+    
+    
 
 
     return (

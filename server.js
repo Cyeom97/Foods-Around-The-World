@@ -22,6 +22,12 @@ app.get('/countries', async (req, res) => {
   res.json(allCountries)
 })
 
+// read all foods by country --> GET
+app.get('/countries/:id', async (req, res) => {
+  const foodsCountry = await Food.find({ country: req.params.id })
+  res.json(foodsCountry)
+})
+
 // read one country --> GET
 app.get('/countries/:id', async (req, res) => {
   let foundCountry = await Country.findById(req.params.id)
@@ -67,12 +73,6 @@ app.get('/foods/:id', async (req, res) => {
   let foundFood = await Food.findById(req.params.id).populate('country')
 
   res.json(foundFood)
-})
-
-// read all foods by country --> GET
-app.get('/nation/:id', async (req, res) => {
-  const foodsCountry = await Food.find({ country: req.params.id })
-  res.json(foodsCountry)
 })
 
 // update one food --> PUT

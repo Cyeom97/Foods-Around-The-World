@@ -21,7 +21,7 @@ const Countries = () => {
 
    const toFood = (_id) => {
     console.log(_id)
-    navigate(`/foods/nation/:id`)
+    navigate(`/countries/:id`)
    }
 
     return (
