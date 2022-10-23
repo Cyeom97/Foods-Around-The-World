@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Countries from '../components/Countries'
 
-const Countries = () => {
+const Home = () => {
   const [countries, updateCountries] = useState([])
 
   useEffect(() => {
@@ -18,20 +19,24 @@ const Countries = () => {
 
   const toFood = (_id) => {
     console.log(_id)
-    navigate(`/countries/:id`)
+    navigate(`/countries/${_id}`)
   }
 
   return (
     <div>
       <h1>Countries</h1>
-      {countries.map((country) => (
-        <div key={country._id}>
-          <h1>{country.name}</h1>
-          <img src={country.url} alt="country pics" onClick={toFood} />
-        </div>
-      ))}
+      <section className="container-grid">
+        {countries.map((country) => (
+          <Countries
+            key={country._id}
+            id={country._id}
+            name={country.name}
+            image={country.url}
+          />
+        ))}
+      </section>
     </div>
   )
 }
 
-export default Countries
+export default Home
