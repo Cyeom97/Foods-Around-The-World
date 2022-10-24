@@ -11,25 +11,32 @@ const CountryFood = (props) => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/foods`)
+      let response = await axios.get(`http://localhost:3001/country/${id}`)
       setFood(response.data)
     }
     apiCall()
   }, [])
 
-  useEffect(() => {
-    food.map((foods) => {
-      if (parseInt(id) === parseInt(foods.country)) {
-        updateByCountry(foods)
-        console.log(foods.name)
-      }
-    })
-  }, [])
+  // useEffect(() => {
+  //   food.map((foods) => {
+  //     if (parseInt(id) === parseInt(foods.country)) {
+  //       updateByCountry(foods)
+  //       console.log(foods.name)
+  //     }
+  //   })
+  // }, [])
 
   return (
     <div>
-      <div>{byCountry.name}</div>
-      <img src={byCountry.url} alt={byCountry._id} />
+      <section className="container-grid">
+        {food.map((nation) => (
+          <div key={nation._id}>
+            <h2>{nation.name}</h2>
+            <img src={nation.url} alt={nation.name} />
+            <h3>{nation.description}</h3>
+          </div>
+        ))}
+      </section>
     </div>
   )
 }

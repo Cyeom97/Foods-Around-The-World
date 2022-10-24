@@ -20,7 +20,8 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Countries</h1>
+      <header></header>
+      <h2>Countries</h2>
       <section className="container-grid">
         {countries.map((country) => (
           <div
