@@ -30,7 +30,7 @@ const CountryFood = (props) => {
     <div>
       <section className="container-grid">
         {food.map((nation) => (
-          <div key={nation._id}>
+          <div key={nation._id} className="food">
             <h2>{nation.name}</h2>
             <img src={nation.url} alt={nation.name} />
             <h3>{nation.description}</h3>
