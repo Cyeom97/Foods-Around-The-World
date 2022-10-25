@@ -33,17 +33,6 @@ const FoodList = () => {
     setForm({ name: '', url: '', description: '' })
   }
 
-  // const handleUpdate = async (event) => {
-  //   event.preventDefault()
-  //   console.log(form)
-  //   let updateFood = await axios.put(
-  //     `http://localhost:3001/foods/${id}`,
-  //     form
-  //   )
-  //   updateFoods([...foods, updateFood.data])
-  //   setForm({ name: '', url: '', description: '' })
-  // }
-
   return (
     <div>
       <nav className="navbar">
