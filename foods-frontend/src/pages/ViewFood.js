@@ -43,10 +43,12 @@ const ViewFood = () => {
 
   return (
     <div>
-      <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/foods">All Foods</Link>
-      </nav>
+      <header>
+        <nav className="navbar">
+          <Link to="/">Home</Link>
+          <Link to="/foods">All Foods</Link>
+        </nav>
+      </header>
       <h2>Update the Food:</h2>
       <form onSubmit={handleUpdate}>
         <label htmlFor="name">Name:</label>

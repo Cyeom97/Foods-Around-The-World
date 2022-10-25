@@ -1,21 +1,54 @@
 .App {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
-.navbar{
-  justify-content: space-between;
+header {
+  background-color: #212121;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  background-color: rgb(189, 45, 45);
-  padding: 1em;
-  
+  height: 75px;
+  width: 100vw;
+  color: white;
 }
 
+a { 
+  color: white;
+  text-decoration: none;
+}
 
+header nav a {
+  margin: 0 1em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 75px;
+  width: 100vw;
+}
+
+.links{
+  padding-right: 20px;
+  margin-top: 50px;
+}
+
+.nav-title{
+  margin-left: 20px;
+}
+
+.home-title{
+  display: grid;
+  justify-items: center;
+}
 .container-grid{
   width: 100vw;
+
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -29,8 +62,8 @@
 .food{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border: 1px solid black;
 }
 img {
-  max-width: 400px;
+  width: 400px;
+  height: 280px;
 }

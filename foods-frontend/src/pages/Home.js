@@ -21,26 +21,29 @@ const Home = () => {
 
   return (
     <div>
-      <nav className="navbar">
-        <h2>Countries</h2>
-        <div className="links">
+      <header>
+        <h2 className="nav-title">Countries</h2>
+        <nav className="navbar">
           <Link to="/foods">All Foods</Link>
           <Link to="/">Home</Link>
-        </div>
-      </nav>
-      <section className="container-grid">
-        {countries.map((country) => (
-          <div
-            key={country._id}
-            onClick={() => {
-              showFoods(country._id)
-            }}
-          >
-            <h2>{country.name}</h2>
-            <img src={country.url} alt="country pics" />
-          </div>
-        ))}
-      </section>
+        </nav>
+      </header>
+      <div className="countries">
+        <h1 className="home-title">Famous Foods From Around The World</h1>
+        <section className="container-grid">
+          {countries.map((country) => (
+            <div
+              key={country._id}
+              onClick={() => {
+                showFoods(country._id)
+              }}
+            >
+              <h2>{country.name}</h2>
+              <img src={country.url} alt="country pics" />
+            </div>
+          ))}
+        </section>
+      </div>
     </div>
   )
 }

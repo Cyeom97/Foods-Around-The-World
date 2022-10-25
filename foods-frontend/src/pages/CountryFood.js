@@ -2,11 +2,8 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import FoodList from './FoodList'
-import Home from './Home'
 
-const CountryFood = (props) => {
-  const [byCountry, updateByCountry] = useState('')
+const CountryFood = () => {
   const [food, setFood] = useState([])
   let { id } = useParams()
   let navigate = useNavigate()
@@ -25,10 +22,12 @@ const CountryFood = (props) => {
 
   return (
     <div>
-      <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/foods">All Foods</Link>
-      </nav>
+      <header>
+        <nav className="navbar">
+          <Link to="/">Home</Link>
+          <Link to="/foods">All Foods</Link>
+        </nav>
+      </header>
       <section className="container-grid">
         {food.map((nation) => (
           <div

@@ -35,10 +35,12 @@ const FoodList = () => {
 
   return (
     <div>
-      <nav className="navbar">
-        <h1>Foods</h1>
-        <Link to="/">Home</Link>
-      </nav>
+      <header>
+        <h1 className="nav-title">Foods</h1>
+        <nav className="navbar">
+          <Link to="/">Home</Link>
+        </nav>
+      </header>
 
       <h2>Add another Food:</h2>
       <form onSubmit={handleSubmit}>
@@ -61,15 +63,14 @@ const FoodList = () => {
         </select>
         <button type="submit">Add Food</button>
       </form>
-
-      {foods.map((food) => (
-        <div key={food._id}>
-          <h2>{food.name}</h2>
-          <img src={food.url} alt={food.name} />
-          <h3>{food.description}</h3>
-          <h4>{food.country}</h4>
-        </div>
-      ))}
+      <section className="container-grid">
+        {foods.map((food) => (
+          <div key={food._id}>
+            <h2>{food.name}</h2>
+            <img src={food.url} alt={food.name} />
+          </div>
+        ))}
+      </section>
     </div>
   )
 }
