@@ -62,7 +62,7 @@ app.get('/foods', async (req, res) => {
   res.json(allFoods)
 })
 
-// create AMERICA food --> POST
+// create food --> POST
 app.post('/foods', async (req, res) => {
   let createdFood = await Food.create(req.body)
   res.json(createdFood)

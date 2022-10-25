@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import FoodList from './FoodList'
 import Home from './Home'
@@ -15,19 +16,14 @@ const CountryFood = (props) => {
       setFood(response.data)
     }
     apiCall()
-  }, [])
-
-  // useEffect(() => {
-  //   food.map((foods) => {
-  //     if (parseInt(id) === parseInt(foods.country)) {
-  //       updateByCountry(foods)
-  //       console.log(foods.name)
-  //     }
-  //   })
-  // }, [])
+  }, [id])
 
   return (
     <div>
+      <nav className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/foods">All Foods</Link>
+      </nav>
       <section className="container-grid">
         {food.map((nation) => (
           <div key={nation._id} className="food">

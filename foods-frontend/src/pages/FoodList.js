@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const FoodList = () => {
@@ -6,7 +7,8 @@ const FoodList = () => {
   const [form, setForm] = useState({
     name: '',
     url: '',
-    description: ''
+    description: '',
+    country: ''
   })
 
   useEffect(() => {
@@ -40,8 +42,12 @@ const FoodList = () => {
   }
 
   return (
-    <div className="foodPage">
-      <h1>Foods</h1>
+    <div>
+      <nav className="navbar">
+        <h1>Foods</h1>
+        <Link to="/">Home</Link>
+      </nav>
+
       <h2>Add another Food:</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
@@ -54,11 +60,12 @@ const FoodList = () => {
           value={form.description}
           onChange={handleChange}
         ></input>
-        <select id="selection">
-          <option>USA</option>
-          <option>CAN</option>
-          <option>MEX</option>
-          <option>CEN AM</option>
+        <select id="country" onChange={handleChange}>
+          <option></option>
+          <option value="6352b0b96dabb714d7bc6204">USA</option>
+          <option value="6352b0cd6dabb714d7bc6207">CAN</option>
+          <option value="6352b1086dabb714d7bc620b">MEX</option>
+          <option value="6352b1476dabb714d7bc620e">CEN AM</option>
         </select>
         <button type="submit">Add Food</button>
       </form>

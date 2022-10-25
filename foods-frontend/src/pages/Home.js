@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Home = () => {
@@ -20,8 +21,13 @@ const Home = () => {
 
   return (
     <div>
-      <header></header>
-      <h2>Countries</h2>
+      <nav className="navbar">
+        <h2>Countries</h2>
+        <div className="links">
+          <Link to="/foods">All Foods</Link>
+          <Link to="/">Home</Link>
+        </div>
+      </nav>
       <section className="container-grid">
         {countries.map((country) => (
           <div
