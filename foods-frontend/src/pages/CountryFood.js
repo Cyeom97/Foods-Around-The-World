@@ -32,13 +32,13 @@ const CountryFood = () => {
         {food.map((nation) => (
           <div
             key={nation._id}
-            className="food"
+            className="box"
             onClick={() => {
               viewFood(nation._id)
             }}
           >
             <h2>{nation.name}</h2>
-            <img src={nation.url} alt={nation.name} />
+            <img src={nation.url} alt={nation.name} className="img" />
           </div>
         ))}
       </section>

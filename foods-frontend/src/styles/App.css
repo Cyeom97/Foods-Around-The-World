@@ -59,11 +59,20 @@ nav {
   border: 1px solid black;
 }
 
-.food{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+
 img {
   width: 400px;
   height: 280px;
 }
+
+.box {
+  margin: 10px;
+  background-color: beige;
+  
+}
+
+
+
+
+
+

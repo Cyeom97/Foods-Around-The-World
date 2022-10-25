@@ -37,9 +37,10 @@ const Home = () => {
               onClick={() => {
                 showFoods(country._id)
               }}
+              className="box"
             >
               <h2>{country.name}</h2>
-              <img src={country.url} alt="country pics" />
+              <img src={country.url} alt="country pics" className="img" />
             </div>
           ))}
         </section>

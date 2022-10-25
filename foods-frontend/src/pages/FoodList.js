@@ -26,7 +26,6 @@ const FoodList = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(form)
     let newFood = await axios.post('http://localhost:3001/foods', form)
 
     updateFoods([...foods, newFood.data])
@@ -65,9 +64,9 @@ const FoodList = () => {
       </form>
       <section className="container-grid">
         {foods.map((food) => (
-          <div key={food._id}>
+          <div key={food._id} className="box">
             <h2>{food.name}</h2>
-            <img src={food.url} alt={food.name} />
+            <img src={food.url} alt={food.name} className="img" />
           </div>
         ))}
       </section>
