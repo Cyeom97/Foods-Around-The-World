@@ -44,6 +44,39 @@ nav {
   display: grid;
   justify-items: center;
 }
+
+/* .form-type{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin: 15px;
+  border: 5px solid
+} */
+
+
+#name{
+  margin: 0 10px 10px 0;
+}
+
+#url{
+  margin: 0 10px 10px 0;
+}
+
+#description{
+  margin: 0 10px 10px 0;
+  width: 200px;
+  height: 50px;
+}
+
+#country{
+  margin: 0 10px 10px 0;
+}
+
+label {
+  margin-right: 5px;
+}
+
 .container-grid{
   width: 100vw;
 

@@ -30,10 +30,10 @@ app.get('/country/:id', async (req, res) => {
 })
 
 // read one country --> GET
-// app.get('/countries/:id', async (req, res) => {
-//   let foundCountry = await Country.findById(req.params.id)
-//   res.json(foundCountry)
-// })
+app.get('/countries/:id', async (req, res) => {
+  let foundCountry = await Country.findById(req.params.id)
+  res.json(foundCountry)
+})
 
 // create countries --> POST
 app.post('/countries', async (req, res) => {
@@ -42,17 +42,17 @@ app.post('/countries', async (req, res) => {
 })
 
 // update one country --> PUT
-// app.put('/countries/:id', async (req, res) => {
-//   let updatedCountry = await Country.findByIdAndUpdate(
-//     req.params.id,
-//     req.body,
-//     {
-//       new: true
-//     }
-//   )
+app.put('/countries/:id', async (req, res) => {
+  let updatedCountry = await Country.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true
+    }
+  )
 
-//   res.json(updatedCountry)
-// })
+  res.json(updatedCountry)
+})
 
 // FOODS
 

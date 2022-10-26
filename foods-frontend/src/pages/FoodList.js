@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const FoodList = () => {
   const [foods, updateFoods] = useState([])
+  const [nation, updateNation] = useState([])
   const [form, setForm] = useState({
     name: '',
     url: '',
@@ -18,6 +19,15 @@ const FoodList = () => {
     }
 
     apiCall()
+  }, [])
+
+  useEffect(() => {
+    const nationCall = async () => {
+      let response = await axios.get(`http://localhost:3001/countries`)
+      updateNation(response.data)
+    }
+
+    nationCall()
   }, [])
 
   const handleChange = (event) => {
@@ -42,7 +52,7 @@ const FoodList = () => {
       </header>
 
       <h2>Add another Food:</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-type">
         <label htmlFor="name">Name:</label>
         <input id="name" value={form.name} onChange={handleChange}></input>
         <label htmlFor="url">Image URL:</label>
@@ -54,11 +64,12 @@ const FoodList = () => {
           onChange={handleChange}
         ></input>
         <select id="country" onChange={handleChange}>
-          <option></option>
-          <option value="6352b0b96dabb714d7bc6204">USA</option>
-          <option value="6352b0cd6dabb714d7bc6207">CAN</option>
-          <option value="6352b1086dabb714d7bc620b">MEX</option>
-          <option value="6352b1476dabb714d7bc620e">CEN AM</option>
+          <option>Country</option>
+          {nation.map((nationFood) => (
+            <option value={nationFood._id} key={nationFood._id}>
+              {nationFood.name}
+            </option>
+          ))}
         </select>
         <button type="submit">Add Food</button>
       </form>

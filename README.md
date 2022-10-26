@@ -45,3 +45,7 @@ Food is a necessity for survival. Delicious foods are a necessity for happiness.
 
 - [Foods around the World Pic](https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.tasteatlas.com%2Fstatic%2Fmap_entire2.png&imgrefurl=https%3A%2F%2Fwww.tasteatlas.com%2F&tbnid=i0CbtQsNU31JhM&vet=12ahUKEwiDvtzJke36AhWHmVMKHU2wBe4QMygBegUIARDsAQ..i&docid=jLTNouDQOj2a-M&w=1500&h=786&q=foods%20around%20the%20world&ved=2ahUKEwiDvtzJke36AhWHmVMKHU2wBe4QMygBegUIARDsAQ)
 - [American Dishes](https://www.cnn.com/travel/article/american-food-dishes/index.html)
+- [Canada Dishes](https://www.hostelworld.com/blog/best-traditional-canadian-food/)
+- [Mexico Dishes](https://www.bbcgoodfood.com/howto/guide/top-10-foods-try-mexico)
+- [Central America](https://www.spanish.academy/blog/11-traditional-foods-from-central-america-and-south-america/)
+- [Venezuela](https://nomadparadise.com/venezuelan-food/)
