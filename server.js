@@ -24,7 +24,6 @@ app.get('/countries', async (req, res) => {
 
 // read all foods by country --> GET
 app.get('/country/:id', async (req, res) => {
-  console.log('Params', req.params)
   const foodsCountry = await Food.find({ country: req.params.id })
   res.json(foodsCountry)
 })

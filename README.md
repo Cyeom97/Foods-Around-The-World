@@ -15,6 +15,8 @@
 #### **Getting Started**
 
 - `Fork` and `clone` this repository
+- `Npm i create-react-app`
+- `Npm i react-router-dom`
 
 ## **Overview**
 
@@ -40,6 +42,69 @@ Food is a necessity for survival. Delicious foods are a necessity for happiness.
 - MONGOOSE
 
 ---
+
+### _Back-End_
+
+- I first made a schema file called country which made the `name` to a string and the `url` to a string and both are required.
+- Then I made another schema file called `food` that had the `name`, `description`, and `url` to a string that is required. I lastly added a schema `ObjectId` that references the country schema and that is how I will link the two together.
+- It is important to create an index.js that sets the schemas to mongoose. Then you have to export the modules.
+- I made a `server.js` file which would show all the logic for my routes.
+- I installed cors to connect to the front-end as well as a PORT 3001 so I can see it in `LocalHost 3001`
+- I then created middleware functions for express.json as well as cors.
+- Now to create routes. I made a get for all countries doing:
+
+```
+app.get('/countries', async (req, res) => {
+  let allCountries = await Country.find({})
+  res.json(allCountries)
+})
+```
+
+- I followed the same format to read one country, create countries, update a country, update a food, delete a food, read all foods, and create a food. The only difference was to adjust the get to put, delete, and post
+- To get all foods by one country was slightly different.
+
+```
+// read all foods by country --> GET
+app.get('/country/:id', async (req, res) => {
+  console.log('Params', req.params)
+  const foodsCountry = await Food.find({ country: req.params.id })
+  res.json(foodsCountry)
+})
+```
+
+- Lasty in the server.js, I added a app.listen so the server listens to `localhost 3001`.
+
+---
+
+### _Front-End_
+
+---
+
+#### HTML JS
+
+- In your `index.js` import `ReactDOM`, `App`, and `BrowserRouter`
+- Wrap `<BrowserRouter>` around the `<App />`
+- In your `App.js`, import `React` and `{ Routes, Route}`
+- Inside of the `<main>` added `<Routes>` and wrap `<Route>` inside of it.
+- Create a page folder and inside of it, create a `Home.js` file this is where you will display on the browser
+- In the `Home.js` import `useState` and use `useEffect` as well as `axios`
+- Inside your Home function, create a `countries`, `updateCountries` and set it equal to `useState([])`
+- Set the `useEffect` with an `async` `await`. Then `axios.get('http://localhost:3001/countries/')`. Then store the variable associated with the axios.get in `updateCountries`. This stores all the data from the url, the countries data, to a `useState`.
+- Then in the return, wrap another `div` inside of the main `div`. Then wrap a `h1` tag inside and set it to Famouse Foods From Around The World. Then create a `section` tag witht the class of `container-grid`. Make a map function associated with the `countries` useState and create a `div` tag with a key of `country._id`. After that, create a `h2` tage with `{country.name}` wrap in it as well as an `img` tag with the src equal to `country.url`. What this does is show all the countries name and image. Finally `export default Home` in the bottom and everything should appear on the brower.
+- Create a `FoodList.js` in the pages folder that would show all the foods in the browser. Follow the similar layout to the `Home.js`. The only difference would be the axios.get will be `foods` not `countries`. The other difference would be the `return` would have a `h2` tag with `{food.name}` and an `img` tag with the `src={food.url}`. This would make the page show all foods with the images.
+- I then created a page to show all foods from a certain country. The first thing I did was create another file called `CountryFood` under the page folder. Then I imported `useEffect, useState, useParams, and useNavigate`. Then inside the CountryFood function, I set a useState to `food` and `setFood`. I `let {id} = useParams()` then `let navigate = useNavigate()`. What I am doing here is to set the id of the url to a variable called `id` and created a variable called `navigate` to the `useNavigate()` function. Then to call the `navigate` I made a variable called viewFood and set the paramters to `foodie`. Then in the function I did `navigate(${foodie})`. For my useEffect, I set the axios.get to `http://localhost:3001/country/${id}`. The allows me to grab the backend of all the foods by country due to useParams. Finally in the return, I had the same format as the `FoodList.js` so it would show all food names and image.
+- I made my last file called `ViewFood.js` which would go to a different page and show one specific food. I followed the same format as `CountryFoods.js` file.
+- I then updated all `Routes` in my `App.js` to so it appears on the browser.
+
+---
+
+#### CSS
+
+- I made the `.App` with a display of flex, justify-content set to `center`, and `text-align` set to center.
+- For the header, I changed the background color to a black tone, with the display of `flex`, justify-content to `flex-end`, align-items to `center`, font-color to `white`, and the height, width, to `75px 100vw` respectively.
+- I took out the underline in the link tags and made the font white.
+- I made sure the input boxes were in the center and spaced them evenly.
+- I set all the images and the names to a grid and made columns so it looks cleaner. Lastly, I made all the images to a width of 400px, and a height of 280px so they are all the same size.
 
 ### Credits
 

@@ -45,15 +45,6 @@ nav {
   justify-items: center;
 }
 
-/* .form-type{
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-  column-gap: 10px;
-  row-gap: 10px;
-  margin: 15px;
-  border: 5px solid
-} */
-
 
 #name{
   margin: 0 10px 10px 0;
