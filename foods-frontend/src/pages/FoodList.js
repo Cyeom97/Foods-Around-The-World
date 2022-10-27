@@ -45,7 +45,7 @@ const FoodList = () => {
   return (
     <div>
       <header>
-        <h1 className="nav-title">Foods</h1>
+        <h1 className="nav-title font-face-mulish">Foods</h1>
         <nav className="navbar">
           <Link to="/">Home</Link>
         </nav>
@@ -75,7 +75,7 @@ const FoodList = () => {
       </form>
       <section className="container-grid">
         {foods.map((food) => (
-          <div key={food._id} className="box">
+          <div key={food._id} className="box font-face-playfair">
             <h2>{food.name}</h2>
             <img src={food.url} alt={food.name} className="img" />
           </div>

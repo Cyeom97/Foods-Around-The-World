@@ -29,6 +29,7 @@ const ViewFood = () => {
     let updateFood = await axios.put(`http://localhost:3001/foods/${id}`, form)
     setAFood([aFood, updateFood.data])
     setForm({ name: '', url: '', description: '' })
+    document.location.reload()
   }
 
   const handleDelete = async (event) => {
@@ -64,7 +65,7 @@ const ViewFood = () => {
         <button type="submit">Update Food</button>
       </form>
       <button onClick={handleDelete}>Delete</button>
-      <section className="box" id="oneFood">
+      <section className="box font-face-playfair" id="oneFood">
         <h2>{aFood.name}</h2>
         <img src={aFood.url} alt={aFood.name} className="img" />
         <h3>{aFood.description}</h3>

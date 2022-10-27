@@ -4,6 +4,9 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
+import './fonts/Great_Vibes/GreatVibes-Regular.ttf'
+import './fonts/Great_Vibes/Mulish/Mulish-VariableFont_wght.ttf'
+import './fonts/Great_Vibes/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

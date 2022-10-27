@@ -22,14 +22,17 @@ const Home = () => {
   return (
     <div>
       <header>
-        <h2 className="nav-title">Countries</h2>
+        <h2 className="nav-title font-face-mulish">Countries</h2>
         <nav className="navbar">
           <Link to="/foods">All Foods</Link>
           <Link to="/">Home</Link>
         </nav>
       </header>
       <div className="countries">
-        <h1 className="home-title">Famous Foods From Around The World</h1>
+        <h1 className="home-title font-face-playfair">
+          <span>Famous Foods From</span>
+          Around The World
+        </h1>
         <section className="container-grid">
           {countries.map((country) => (
             <div
@@ -37,7 +40,7 @@ const Home = () => {
               onClick={() => {
                 showFoods(country._id)
               }}
-              className="box"
+              className="box font-face-playfair"
             >
               <h2>{country.name}</h2>
               <img src={country.url} alt="country pics" className="img" />

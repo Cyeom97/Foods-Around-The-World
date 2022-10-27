@@ -2,20 +2,33 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: #f9f9f9;
+}
+.font-face-gv {
+  font-family: "GreatVibesRegular";
+  font-weight: 200;
+  font-size: 50px;
 }
 
+.font-face-mulish {
+  font-family: "Mulish";
+}
+
+.font-face-playfair{
+  font-family: "PlayFair";
+  font-weight: 200;
+}
 header {
-  background-color: #212121;
+  background-color: white;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 75px;
   width: 100vw;
-  color: white;
 }
 
 a { 
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -29,6 +42,7 @@ nav {
   justify-content: flex-end;
   height: 75px;
   width: 100vw;
+  font-weight: 350;
 }
 
 .links{
@@ -43,8 +57,11 @@ nav {
 .home-title{
   display: grid;
   justify-items: center;
+  font-style: italic;
 }
-
+.country-title{
+  margin-left: 14px;
+}
 
 #name{
   margin: 0 10px 10px 0;
@@ -56,8 +73,7 @@ nav {
 
 #description{
   margin: 0 10px 10px 0;
-  width: 200px;
-  height: 50px;
+  
 }
 
 #country{
@@ -91,8 +107,12 @@ img {
 
 .box {
   margin: 10px;
-  background-color: beige;
-  
+  background-color: white;
+  font-weight: 200;
+}
+
+.countryFood-grid{
+  margin: 10px;
 }
 
 

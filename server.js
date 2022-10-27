@@ -9,6 +9,7 @@ const app = express()
 // middleware here
 app.use(express.json())
 app.use(cors())
+app.use(express.static(`${__dirname}/foods-frontend/build`))
 
 app.get('/', (req, res) => {
   res.send({ msg: 'This route is being hit' })
@@ -87,6 +88,10 @@ app.put('/foods/:id', async (req, res) => {
 app.delete('/foods/:id', async (req, res) => {
   let deletedFood = await Food.findByIdAndDelete(req.params.id)
   res.json(deletedFood)
+})
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/foods-frontend/build/index.html`)
 })
 
 app.listen(PORT, () => {

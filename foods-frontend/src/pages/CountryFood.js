@@ -5,6 +5,7 @@ import axios from 'axios'
 
 const CountryFood = () => {
   const [food, setFood] = useState([])
+  const [country, setCountry] = useState([])
   let { id } = useParams()
   let navigate = useNavigate()
 
@@ -20,19 +21,32 @@ const CountryFood = () => {
     apiCall()
   }, [id])
 
+  useEffect(() => {
+    const apiCall = async () => {
+      let response = await axios.get(`http://localhost:3001/countries/${id}`)
+      setCountry(response.data)
+    }
+    apiCall()
+  }, [id])
+
   return (
     <div>
       <header>
+        <h2 className="country-title font-face-mulish">{country.name}</h2>
         <nav className="navbar">
-          <Link to="/">Home</Link>
-          <Link to="/foods">All Foods</Link>
+          <Link to="/">
+            <em>Home</em>
+          </Link>
+          <Link to="/foods">
+            <em>All Foods</em>
+          </Link>
         </nav>
       </header>
-      <section className="container-grid">
+      <section className="container-grid countryFood-grid">
         {food.map((nation) => (
           <div
             key={nation._id}
-            className="box"
+            className="box font-face-playfair"
             onClick={() => {
               viewFood(nation._id)
             }}

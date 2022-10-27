@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "GreatVibesRegular";
+  src: local("GreatVibes"), url("./fonts/Great_Vibes/GreatVibes-Regular.ttf");
+  
+}
+@font-face {
+  font-family: "Mulish";
+  src: local("Mulish"), url("./fonts/Great_Vibes/Mulish/Mulish-VariableFont_wght.ttf")
+}
+
+@font-face {
+  font-family: "PlayFair";
+  src: local("PlayFair"), url("./fonts/Great_Vibes/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
+}
