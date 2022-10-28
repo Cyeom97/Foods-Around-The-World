@@ -33,8 +33,6 @@ Food is a necessity for survival. Delicious foods are a necessity for happiness.
 - HTML
 - CSS
 - JS Front-End
-- UseState
-- UseEffect
 - JS Back-End
 - REACT
 - MONGODB
@@ -43,7 +41,7 @@ Food is a necessity for survival. Delicious foods are a necessity for happiness.
 
 ---
 
-![ScreenShot](/screenshot/Screenshot%202022-10-28%20at%2011.41.41%20AM.png)
+![ScreenShot](/screenshot/Screenshot%202022-10-28%20at%2011.57.02%20AM.png)
 
 ---
 
