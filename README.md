@@ -4,7 +4,7 @@
 
 #### Links About Me
 
-[Github](https://github.com/Cyeom97/Foods-Around-The-World) [Trello](https://trello.com/b/BCrxqu82/foods-around-the-world) [Component Heirarchy](https://lucid.app/lucidchart/8fb6d955-c341-4307-ad7c-81ef31cf3521/edit?beaconFlowId=56E923C1BE354759&invitationId=inv_69f5dce2-b1d2-4b2e-b2ff-0e288157c78c&page=0_0#)
+[Github](https://github.com/Cyeom97/Foods-Around-The-World) [Trello](https://trello.com/b/BCrxqu82/foods-around-the-world) [Component Heirarchy](https://lucid.app/lucidchart/8fb6d955-c341-4307-ad7c-81ef31cf3521/edit?beaconFlowId=56E923C1BE354759&invitationId=inv_69f5dce2-b1d2-4b2e-b2ff-0e288157c78c&page=0_0#) [Heroku](https://guarded-citadel-18473.herokuapp.com/)
 
 ---
 
@@ -40,6 +40,10 @@ Food is a necessity for survival. Delicious foods are a necessity for happiness.
 - MONGODB
 - EXPRESS
 - MONGOOSE
+
+---
+
+![ScreenShot](/screenshot/Screenshot%202022-10-28%20at%2011.41.41%20AM.png)
 
 ---
 
