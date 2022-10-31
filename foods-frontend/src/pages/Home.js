@@ -12,7 +12,7 @@ const Home = () => {
   }
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/countries/')
+      let response = await axios.get('countries/')
       updateCountries(response.data)
     }
 

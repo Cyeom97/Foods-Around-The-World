@@ -14,7 +14,7 @@ const FoodList = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/foods`)
+      let response = await axios.get(`foods`)
       updateFoods(response.data)
     }
 
@@ -23,7 +23,7 @@ const FoodList = () => {
 
   useEffect(() => {
     const nationCall = async () => {
-      let response = await axios.get(`http://localhost:3001/countries`)
+      let response = await axios.get(`countries`)
       updateNation(response.data)
     }
 
@@ -36,7 +36,7 @@ const FoodList = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let newFood = await axios.post('http://localhost:3001/foods', form)
+    let newFood = await axios.post('foods', form)
 
     updateFoods([...foods, newFood.data])
     setForm({ name: '', url: '', description: '' })

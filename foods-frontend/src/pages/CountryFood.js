@@ -15,7 +15,7 @@ const CountryFood = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/country/${id}`)
+      let response = await axios.get(`country/${id}`)
       setFood(response.data)
     }
     apiCall()
@@ -23,7 +23,7 @@ const CountryFood = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/countries/${id}`)
+      let response = await axios.get(`countries/${id}`)
       setCountry(response.data)
     }
     apiCall()
