@@ -14,7 +14,7 @@ const ViewFood = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`foods/${id}`)
+      let response = await axios.get(`/foods/${id}`)
       setAFood(response.data)
     }
     apiCall()
@@ -26,7 +26,7 @@ const ViewFood = () => {
 
   const handleUpdate = async (event) => {
     event.preventDefault()
-    let updateFood = await axios.put(`foods/${id}`, form)
+    let updateFood = await axios.put(`/foods/${id}`, form)
     setAFood([aFood, updateFood.data])
     setForm({ name: '', url: '', description: '' })
     document.location.reload()
@@ -34,7 +34,7 @@ const ViewFood = () => {
 
   const handleDelete = async (event) => {
     event.preventDefault()
-    let deleteFood = await axios.delete(`foods/${id}`, form)
+    let deleteFood = await axios.delete(`/foods/${id}`, form)
     setAFood([aFood, deleteFood.data])
     setForm({ name: '', url: '', description: '' })
   }
