@@ -48,7 +48,7 @@ const CountryFood = () => {
             key={nation._id}
             className="box font-face-playfair"
             onClick={() => {
-              viewFood(nation.name)
+              viewFood(nation._id)
             }}
           >
             <h2>{nation.name}</h2>
